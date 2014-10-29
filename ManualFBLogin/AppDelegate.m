@@ -17,7 +17,7 @@
     return YES;
 }
 
-// Facebook Permissions for Login
+// Facebook Permissions for Login add
 - (void)openActiveSessionWithPermissions:(NSArray *)permissions allowLoginUI:(BOOL)allowLoginUI{
     [FBSession openActiveSessionWithReadPermissions:permissions
                                        allowLoginUI:allowLoginUI
