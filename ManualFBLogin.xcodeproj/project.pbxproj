@@ -16,11 +16,11 @@
 		9915FE6519C63680009B012F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9915FE6319C63680009B012F /* Main.storyboard */; };
 		9915FE6819C63680009B012F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9915FE6719C63680009B012F /* ViewController.m */; };
 		9915FE6A19C63680009B012F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9915FE6919C63680009B012F /* Images.xcassets */; };
-		9915FE7119C63680009B012F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9915FE7019C63680009B012F /* XCTest.framework */; };
 		9915FE7219C63680009B012F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9915FE5119C6367F009B012F /* Foundation.framework */; };
 		9915FE7319C63680009B012F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9915FE5519C6367F009B012F /* UIKit.framework */; };
 		9915FE7B19C63680009B012F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9915FE7919C63680009B012F /* InfoPlist.strings */; };
 		9915FE7D19C63680009B012F /* ManualFBLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9915FE7C19C63680009B012F /* ManualFBLoginTests.m */; };
+		995AD32019D289AF004FBEA2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995AD31F19D289AE004FBEA2 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +49,10 @@
 		9915FE6719C63680009B012F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9915FE6919C63680009B012F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9915FE6F19C63680009B012F /* ManualFBLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManualFBLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9915FE7019C63680009B012F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9915FE7819C63680009B012F /* ManualFBLoginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ManualFBLoginTests-Info.plist"; sourceTree = "<group>"; };
 		9915FE7A19C63680009B012F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9915FE7C19C63680009B012F /* ManualFBLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualFBLoginTests.m; sourceTree = "<group>"; };
+		995AD31F19D289AE004FBEA2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9915FE5419C6367F009B012F /* CoreGraphics.framework in Frameworks */,
+				995AD32019D289AF004FBEA2 /* FacebookSDK.framework in Frameworks */,
 				9915FE5619C6367F009B012F /* UIKit.framework in Frameworks */,
 				9915FE5219C6367F009B012F /* Foundation.framework in Frameworks */,
 			);
@@ -70,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9915FE7119C63680009B012F /* XCTest.framework in Frameworks */,
 				9915FE7319C63680009B012F /* UIKit.framework in Frameworks */,
 				9915FE7219C63680009B012F /* Foundation.framework in Frameworks */,
 			);
@@ -101,10 +101,10 @@
 		9915FE5019C6367F009B012F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				995AD31F19D289AE004FBEA2 /* FacebookSDK.framework */,
 				9915FE5119C6367F009B012F /* Foundation.framework */,
 				9915FE5319C6367F009B012F /* CoreGraphics.framework */,
 				9915FE5519C6367F009B012F /* UIKit.framework */,
-				9915FE7019C63680009B012F /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,6 +376,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Mavericks/Documents/FacebookSDK,
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManualFBLogin/ManualFBLogin-Prefix.pch";
 				INFOPLIST_FILE = "ManualFBLogin/ManualFBLogin-Info.plist";
@@ -389,6 +394,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Mavericks/Documents/FacebookSDK,
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManualFBLogin/ManualFBLogin-Prefix.pch";
 				INFOPLIST_FILE = "ManualFBLogin/ManualFBLogin-Info.plist";
@@ -456,6 +466,7 @@
 				9915FE8219C63680009B012F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9915FE8319C63680009B012F /* Build configuration list for PBXNativeTarget "ManualFBLoginTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +475,7 @@
 				9915FE8519C63680009B012F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
